@@ -87,6 +87,7 @@ def logisticRegressionImportance(model, X, X_train, y_train):
     
     # Order DataFrame
     df_Scores = df_Scores.sort_values(by='Scoring', ascending=False)
+    df_Scores = df_Scores.reset_index()
     print(' '*2,'Logisitic Regression Feature Importance')
     print('-'*40)
     display(df_Scores)
