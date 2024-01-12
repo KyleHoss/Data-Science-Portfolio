@@ -18,6 +18,42 @@ from sklearn.model_selection import train_test_split,cross_validate,GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, precision_score, classification_report
 
 # IMPORTANCE FUNCTIONS
+def DeepLearningImportance(model):
+    '''
+    Title: Deep Learning Feature Importance
+    Description: This will display a pandas data frame of first weights of inputs for your deep learning model
+                 and then plot a chart showing those relationships graphically.
+    model: Keras Deep Learning Model
+    '''
+    # Create title for Chart
+    title = 'Feature Importance for '+ model.name
+
+    # Get all weights from Deep Learning Model
+    weights = model.get_weights()
+
+    # Normalize those weights for the input layer
+    feature_importance_keras = np.sum(np.abs(weights[0]),axis=1)
+
+    # Create a dictionary to convert to a Pandas Dataframe
+    importance_data = {'Feature': X_train.columns.values,
+                       'Importance': feature_importance_keras}
+
+    # Create Pandas DataFrame & Sort by Importance
+    importance_df = pd.DataFrame(importance_data)
+    importance_df= importance_df.sort_values('Importance', ascending = False)
+
+    # Display & Sort results
+    display(importance_df)
+
+    # Create Barchart
+    sns.barplot(data=importance_df,
+                    x='Importance',
+                    y='Feature',
+                    orient='h')
+    
+    # Title for chart
+    plt.title(title)
+    
 def treeRegressionImportance(model_name, model, X_train, y_train):
     '''
     Title: Tree Regression Importance
