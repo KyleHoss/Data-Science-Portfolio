@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split,cross_validate,GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, precision_score, classification_report
 
 # IMPORTANCE FUNCTIONS
-def DeepLearningImportance(model):
+def DeepLearningImportance(model, X_scaled):
     '''
     Title: Deep Learning Feature Importance
     Description: This will display a pandas data frame of first weights of inputs for your deep learning model
@@ -35,7 +35,7 @@ def DeepLearningImportance(model):
     feature_importance_keras = np.sum(np.abs(weights[0]),axis=1)
 
     # Create a dictionary to convert to a Pandas Dataframe
-    importance_data = {'Feature': X_train.columns.values,
+    importance_data = {'Feature': X_scaled.columns.values,
                        'Importance': feature_importance_keras}
 
     # Create Pandas DataFrame & Sort by Importance
