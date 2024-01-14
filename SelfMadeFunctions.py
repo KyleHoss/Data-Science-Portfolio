@@ -2,8 +2,14 @@
 Self Made Functions-
 I tend to use these functions alot so I have imported them for easier use. :-)
 '''
+# Add SelfMadeFunctions to Path
+sys.path.insert(0,'../../../../Data-Science-Portfolio/')
+# Import Self Made Functions
+from SelfMadeFunctions import *
+
 
 # Import Core Libraries
+import os
 import sys
 import time
 import numpy as np
@@ -11,11 +17,28 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Import Deep Learning Libraries
+import keras
+import tensorflow as tf
+from keras import layers
+
 # Import Metric & Preprocessing Libraries
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_auc_score, precision_recall_curve, recall_score
 from sklearn.model_selection import train_test_split,cross_validate,GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, precision_score, classification_report
+
+# Import Machine Learning Libraries
+from sklearn.svm import SVC
+from xgboost import XGBClassifier 
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import VotingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 # IMPORTANCE FUNCTIONS
 def DeepLearningImportance(model, X_scaled):
@@ -330,6 +353,42 @@ def precisionRecallAnalysis(y_true, y_proba):
   '''
   # Precision Recall Analysis 
   precisions, recalls, thresholds = precision_recall_curve(y_true, y_proba[:,1])
+
+  # Set size of graph
+  plt.figure(figsize=(16, 7))  
+  plt.suptitle('Precision vs. Recall Analysis')
+
+  # Create First plot
+  plt.subplot(1,2,1)
+  plt.title('Precision & Recall VS. Threshold')
+  plt.xlabel("Threshold")
+  plt.ylabel('Precision & Recall')
+  line1 = sns.lineplot(x = thresholds, y = precisions[:-1], color='b', lw=2)
+  line2 = sns.lineplot(x = thresholds , y = recalls[:-1], color='g', lw=2)
+  
+  # Set Lines to dashes
+  line1.lines[0].set_linestyle("--")
+  line1.lines[1].set_linestyle("--")
+  plt.legend(loc='lower left', labels=['Precision', 'Recall'])
+
+  # Create Presicion VS. Recall Plot
+  plt.subplot(1,2,2)
+  plt.title('Precision VS. Recall')
+  plt.xlabel('Recall')
+  plt.ylabel('Precision')
+  sns.lineplot(x=recalls[:-1], y=precisions[:-1], lw=2)
+
+def DeepPrecisionRecallAnalysis(y_true, y_proba):
+  '''
+  Title: Precision & Recall Analysis for Deep Learning Models
+  Description: This will produce two charts that to give visualization to 
+               precision and recall.
+  
+  y_true: The true values target values.
+  y_proba: The associated probabilies for making predicitons on y_true. 
+  '''
+  # Precision Recall Analysis 
+  precisions, recalls, thresholds = precision_recall_curve(y_true, y_proba)
 
   # Set size of graph
   plt.figure(figsize=(16, 7))  
