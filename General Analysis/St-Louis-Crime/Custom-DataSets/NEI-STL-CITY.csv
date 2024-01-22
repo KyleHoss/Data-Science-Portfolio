@@ -1,4 +1,4 @@
-Nei-NeighborHood, Nei-District#,Nei-Patrol-District
+Nei-NeighborHood,Nei-District,Nei-Patrol-District
 "Carondelet",1,"South Patrol"
 "Patch",1,"South Patrol"
 "Holly Hills",1,"South Patrol"
@@ -44,8 +44,8 @@ Nei-NeighborHood, Nei-District#,Nei-Patrol-District
 "Franz Park",2,"South Patrol"
 "Hi-Pointe",2,"South Patrol"
 "Wydown Skinker",2,"South Patrol"
-"Skinker DeBaliviere",2,"South Patrol"
-"DeBaliviere Place",2,"South Patrol"
+"Skinker DeBaliviere",5,"North Patrol"
+"DeBaliviere Place",5,"North Patrol"
 "West End",5,"North Patrol"
 "Visitation Park",5,"North Patrol"
 "Wells Goodfellow",5,"North Patrol"
