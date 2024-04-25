@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<!-- Adding Poppins Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!--Import Custom Stylesheet-->
+<link rel="stylesheet" type="text/css" href="../../style.css" />
+
+<!-- Import STL StyleSheet -->
+<link rel="stylesheet" type="text/css" href="stl-style.css" />
+
+<!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Add Scroll Reveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Typing Animation -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Title -->
+<title>Kyle's Portfolio Website</title>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+
+        <!-- Logo -->
+        <a href="/KyleHostetter.github.io-main/index.html" class="logo">Kyle's <span>Portfolio</span></a>
+
+        <!-- NavBar -->
+        <nav class="navbar">
+            <a href="#Soulard" class="active">Soulard</a>
+            <a href="#CrimeChart">Crime Statistics</a>
+            <a href="#Geo-Map">Geographical Maps</a>
+            <a href="#Density-Map">Denisty Maps</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="stl-home" id="Soulard">
+        <div class="stl-home-content">
+            <h1>Soulard</h1>
+            <p>
+                (SOO-lard) is a historic neighborhood in St. Louis, Missouri. It is the home of Soulard Farmers Market, the oldest farmers' market west of the Mississippi River. Soulard is one of ten certified local historic districts in the city of St. Louis.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://www.facebook.com/kyle.hostetter.775">
+                    <i class='bx bxl-meta'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kyle-hostetter-906182157/6">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/KyleHoss">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+            <a href="/KyleHostetterResume.pdf" class="btn">Download Juypter Notebook</a>
+        </div>
+        <!-- Profile Picture -->
+        <div class="stl-home-img-container">
+            <img class="stl-home-image" src="Map-Covers/Neighborhoods/Soulard.jpeg" alt="St. Louis Area Crime Map">
+        </div>
+    </section>
+
+    <!-- Crime Statistics -->
+    <section class="stl-port" id="CrimeChart">
+        <h2 class="heading">Crime <span>Statistics</span></h2>
+            <div class="stl-charts">
+                <iframe src="Soulard.html" frameborder="0"></iframe>
+            </div>
+    </section>
+
+    <!-- Villages -->
+    <section class="stl-port" id="Geo-Map">
+        <h2 class="heading">Geographical <span>Mapping</span></h2>
+        <div class="stl-charts">
+            <iframe src="STL-City-County-Split.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="stl-port" id="Density-Map">
+        <h2 class="heading">Density <span>Map</span></h2>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Built by Kyle J. Hostetter | Youtube Tutorials Helped!</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#Overview"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
