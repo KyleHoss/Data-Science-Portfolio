@@ -1,0 +1,268 @@
+/* Elements */
+body {
+  color: white;
+  background-color: rgb(53, 53, 66);
+  overflow-x: hidden;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Accent-Color {
+  color: rgb(235, 182, 69);
+}
+.Web-Front{
+  background-color: rgb(53, 53, 66);
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+.NameLabel{
+  position: relative;
+  left: 10%;
+  top:10%;
+}
+
+/* ---------------------------------------------------------- */
+/* NavBar */
+.NavBar{
+  display: flex;
+  padding: 10px;
+}
+.Logo{
+  width: 20%;
+  align-items: center;
+}
+.Logo img{
+  width: 70px;
+  border-radius: 50%;
+}
+.NavBar .Web-Links{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NavBar .Web-Links a{
+  margin-left: 25px ;
+  margin-right: 25px;
+  text-decoration: none;
+}
+.Social-Links {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.Social-Links img{
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+.NavBar a{
+  animation: SlideUp 200ms linear;
+  animation-delay: calc(var(--nav-order) * 100ms);
+  animation-iteration-count: 1;
+}
+.NavBar a:hover{
+  transition-duration: 400ms;
+  transform: translateY(-10px);
+  color: white;
+}
+@keyframes SlideUp {
+  0%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+/* End NavBar */
+/* ---------------------------------------------------------- */
+/* Footer */
+.Footer{
+  width: 100%;
+  margin: 3px;
+  display: flex;
+  padding: 10px;
+  border-top: groove rgb(211, 21, 21);
+  border-width: 1px;
+  border-color: white;
+}
+
+.Footer .My-Message{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer a:hover{
+    transition-duration: 400ms;
+    transform: translateY(-10px);
+}
+/* End Footer */
+/* ---------------------------------------------------------- */
+/* Past Companies */
+.Past-Companies{
+  top: 810px;
+  left: 5%;
+  width: 90%;
+  height: 15%;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 0px 20px 5px rgb(33, 32, 32);
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  background-color: rgb(53, 53, 66);
+}
+
+.Past-Companies img{
+  width: 10%;
+  aspect-ratio: 14 / 9;
+  box-shadow: 0px 0px 5px 5px rgb(33, 32, 32);
+  animation: bounce 1200ms linear;
+  animation-delay: calc(var(--bounce-order) * 100ms);
+  background-color: white;
+  transition-duration: 400ms;
+  border-radius: 5%;
+}
+
+.Past-Companies img:hover{
+  transform: translateY(-20px);
+}
+
+.hide{
+  position: absolute;
+  top: -500px;
+  left: 500px;
+  visibility: hidden;
+  width: 500px;
+  height: 300px;
+  padding: 5%;
+  background-color: aqua;
+
+}
+
+img:hover + .hide{
+  visibility:visible;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%{
+    transform: translateY(-1000px);
+  }
+  20%,50%,80%,to{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-300px);
+  }
+  60%{
+    transform: translateY(-150px);
+  }
+  70%{
+    transform: translateY(-75px);
+  }
+  90%{
+    transform: translateY(-37.5px);
+  }
+}
+/* ------------------------------------------------------- */
+
+/* HomePage Skills  */
+.Home-Skills{
+  display: flex;
+  min-height: 1000px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 120px;
+  padding-bottom: 3%;
+  justify-content: space-between;
+  background-color: rgb(39, 40, 50);
+}
+
+.Home-Skills .Panel{
+  width: 31.5%;
+  height: 50%;
+  text-align: center;
+  padding-top: 2%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px rgb(33, 32, 32);
+  background-color: rgb(53, 53, 66);
+  animation: riseUp 600ms linear;
+  animation-delay: calc(var(--riseUp-order) * 300ms);
+}
+
+/* Bouncing Animation */
+@keyframes riseUp {
+  0%{
+    transform: translateY(1000px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.Home-Skills .Panel .Highlights{
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Home-Skills .Panel .Highlights div{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-Skills .Panel .Experience h4{
+  text-align: start;
+  padding-left: 10%;
+  border-bottom: solid white;
+}
+
+.Home-Skills .Panel .Experience li{
+  text-align: start;
+}
+
+.Home-Skills .Panel .Project{
+  margin: 2%;
+  display: flex;
+  padding: 1%;
+  align-items: center;
+  justify-content: space-between;
+  border-top: groove rgb(211, 21, 21);
+  border-width: 1px;
+  border-color: white;
+}
+
+.Home-Skills .Panel a{
+  text-decoration: none;
+  color: white;
+}
+
+.Home-Skills .Panel .Project a:hover{
+  transition-duration: 200ms;
+}
+
+.Home-Skills .Panel .Project img{
+  width: 25%;
+  aspect-ratio: 14 / 9;
+  border-radius: 5%;
+  padding-right: 5%;
+}
+
+.Home-Skills .Panel .Project div{
+  text-align: start;
+  padding-right: 5%;
+}
+
+/* ------------------------------------------------------- */
+/* Data Science Portfolio */
+
+
+
