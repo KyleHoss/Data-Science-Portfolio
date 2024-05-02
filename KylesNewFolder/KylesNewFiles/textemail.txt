@@ -1,6 +1,0 @@
-Admin Organization                            : Yes           
-Sub Admin Organization                        : No                  
-Duty Organization                             : Yes              
-Duty Sub Organization                         : No                    
-Region                                        : No   
-Digitial Identifier (specifically the ou= row): Yes                                             
