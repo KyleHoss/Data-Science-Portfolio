@@ -272,12 +272,11 @@ h3 a{
   transition-duration: 0.5s;
 }
 
-
 .stars i{
     display: inline;
     font-size: 3rem; 
     color: gold;
-    animation-duration: 0.5s;
+    animation-duration: 3.0s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-name: shining-star;
